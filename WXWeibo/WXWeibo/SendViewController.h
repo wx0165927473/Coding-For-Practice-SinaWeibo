@@ -28,4 +28,6 @@
 @property (retain, nonatomic) IBOutlet UIView *placeView;
 @property (retain, nonatomic) IBOutlet UIImageView *placeBackgroundView;
 @property (retain, nonatomic) IBOutlet UILabel *placeLabel;
+
+- (void)selectImage;
 @end

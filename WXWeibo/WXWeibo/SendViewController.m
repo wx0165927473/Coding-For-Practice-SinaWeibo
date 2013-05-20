@@ -10,6 +10,8 @@
 #import "UIFactory.h"
 #import "NearByViewController.h"
 #import "BaseNavigationController.h"
+#import "InsertTopicViewController.h"
+#import "InsertAtUserViewController.h"
 
 @interface SendViewController ()
 
@@ -173,6 +175,31 @@
     }];
 }
 
+//插入话题
+- (void)insertTopic {
+    InsertTopicViewController *insertTopVC = [[InsertTopicViewController alloc] init];
+    [self presentViewController:insertTopVC animated:YES completion:NULL];
+    [insertTopVC release];
+    insertTopVC.block = ^(NSString *topicText){
+        NSString *text = self.textView.text;
+        NSString *appendText = [text stringByAppendingString:topicText];
+        self.textView.text = appendText;
+    };
+}
+
+//插入@
+- (void)insertAtUser {
+    InsertAtUserViewController *insertAtUserVC = [[InsertAtUserViewController alloc] init];
+    [self presentViewController:insertAtUserVC animated:YES completion:NULL];
+    [insertAtUserVC release];
+    insertAtUserVC.block = ^(NSString *topicText){
+        topicText = [NSString stringWithFormat:@"@%@",topicText];
+        NSString *text = self.textView.text;
+        NSString *appendText = [text stringByAppendingString:topicText];
+        self.textView.text = appendText;
+    };
+}
+
 #pragma mark - Action
 - (void)sendAction {
     [self doSendData];
@@ -188,10 +215,12 @@
         [self selectImage];
     }
     else if (button.tag == 12) {
-        
+        //话题
+        [self insertTopic];
     }
     else if (button.tag == 13) {
-        
+        //@
+        [self insertAtUser];
     }
     else if (button.tag == 14) {
         //显示表情
@@ -310,8 +339,7 @@
 
 #pragma mark - UIActionSheet delegate
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    UIImagePickerControllerSourceType sourceType;
+
     if (buttonIndex == 0) {
         //判断是否有摄像头
         BOOL isCamera = [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear];
@@ -321,21 +349,24 @@
             [alertView release];
             return;
         }else {
-            sourceType = UIImagePickerControllerSourceTypeCamera;
+            UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+            imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            imagePicker.delegate = self;
+            [self presentViewController:imagePicker animated:YES completion:NULL];
+            [imagePicker release];
         }
     }
     else if (buttonIndex == 1) {
-        sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    }
-    else if (buttonIndex == 2) {
-        
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        imagePicker.delegate = self;
+        [self presentViewController:imagePicker animated:YES completion:NULL];
+        [imagePicker release];
+    }else if (buttonIndex == 2) {
+        //取消按钮
+        [actionSheet resignFirstResponder];
     }
     
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-    imagePicker.sourceType = sourceType;
-    imagePicker.delegate = self;
-    [self presentViewController:imagePicker animated:YES completion:NULL];
-    [imagePicker release];
 }
 
 #pragma mark - UIImagePickerController delegate

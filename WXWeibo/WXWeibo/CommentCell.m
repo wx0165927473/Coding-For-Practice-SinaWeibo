@@ -10,6 +10,10 @@
 #import "CommentModel.h"
 #import "UIImageView+WebCache.h"
 #import "UIUtils.h"
+#import "NSString+URLEncoding.h"
+#import "UserViewController.h"
+#import "WebViewController.h"
+#import "TopicViewController.h"
 
 @implementation CommentCell
 
@@ -68,7 +72,40 @@
 
 #pragma mark - RTLabel delegate
 - (void)rtLabel:(id)rtLabel didSelectLinkWithURL:(NSURL*)url {
-    
+    NSString *absoluteString = [url absoluteString];
+    if ([absoluteString hasPrefix:@"user"]) {
+        NSString *urlString = [url host];
+        urlString = [urlString URLDecodedString];
+        
+        //微博里@人名，@取消不掉，只有在这做判断，需要找到源头优化
+        if ([urlString hasPrefix:@"@"]) {
+            urlString = [urlString substringFromIndex:1];
+        }
+        
+        UserViewController *userVC = [[UserViewController alloc] init];
+        userVC.userName = urlString;
+        [self.viewController.navigationController pushViewController:userVC animated:YES];
+        
+    }else if ([absoluteString hasPrefix:@"http"]) {
+        WebViewController *webVC = [[WebViewController alloc] initWithUrl:absoluteString];
+        [self.viewController.navigationController pushViewController:webVC  animated:YES];
+        [webVC release];
+    }else if ([absoluteString hasPrefix:@"topic"]) {
+        NSString *urlString = [url host];
+        urlString = [urlString URLDecodedString];
+        
+        if ([urlString hasPrefix:@"#"]) {
+            urlString = [urlString substringFromIndex:1];
+            urlString = [urlString substringToIndex:urlString.length-1];
+        }
+        NSLog(@"用户:%@",urlString);
+        
+        TopicViewController *topicVC = [[TopicViewController alloc] init];
+        topicVC.topicName = urlString;
+        [self.viewController.navigationController pushViewController:topicVC animated:YES];
+        [topicVC release];
+    }
 }
+
 
 @end

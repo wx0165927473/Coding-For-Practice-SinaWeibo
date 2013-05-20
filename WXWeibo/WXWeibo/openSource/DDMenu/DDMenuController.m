@@ -533,6 +533,7 @@
 	frame.size.width = kMenuFullWidth;
     view.frame = frame;
     [self.view insertSubview:view atIndex:0];
+    NSLog(@"rightFrame:%f",frame.origin.x);
     
     frame = _root.view.frame;
     frame.origin.x = -(frame.size.width - kMenuOverlayWidth);

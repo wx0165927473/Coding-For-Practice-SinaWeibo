@@ -266,8 +266,13 @@
 		1C531425174555B000E0B766 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C531422174555B000E0B766 /* MessageViewController.m */; };
 		1C531426174555B000E0B766 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C531424174555B000E0B766 /* MessageViewController.xib */; };
 		1C53142C1745563E00E0B766 /* RectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C53142B1745563E00E0B766 /* RectButton.m */; };
+		1C7E04091748DDFD007F35CD /* AtUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E04081748DDFD007F35CD /* AtUserCell.m */; };
 		1C806FC4173FE70F00927CA8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C806FC3173FE70E00927CA8 /* CoreLocation.framework */; };
 		1C9B17AB173BAF2400BA1A92 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9B17AA173BAF2400BA1A92 /* UIView+Additions.m */; };
+		1CDA393217477CA100C3DE82 /* InsertTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA393017477CA100C3DE82 /* InsertTopicViewController.m */; };
+		1CDA393317477CA100C3DE82 /* InsertTopicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDA393117477CA100C3DE82 /* InsertTopicViewController.xib */; };
+		1CDA39371747C9E300C3DE82 /* InsertAtUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA39351747C9E200C3DE82 /* InsertAtUserViewController.m */; };
+		1CDA39381747C9E300C3DE82 /* InsertAtUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDA39361747C9E200C3DE82 /* InsertAtUserViewController.xib */; };
 		1CDCCE2117315D7F009023A5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CDCCE2017315D7F009023A5 /* Default@2x.png */; };
 		1CDCCE2317325C06009023A5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CDCCE2217325C06009023A5 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
@@ -608,9 +613,17 @@
 		1C531424174555B000E0B766 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 		1C53142A1745563E00E0B766 /* RectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectButton.h; sourceTree = "<group>"; };
 		1C53142B1745563E00E0B766 /* RectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectButton.m; sourceTree = "<group>"; };
+		1C7E04071748DDFD007F35CD /* AtUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtUserCell.h; sourceTree = "<group>"; };
+		1C7E04081748DDFD007F35CD /* AtUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtUserCell.m; sourceTree = "<group>"; };
 		1C806FC3173FE70E00927CA8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1C9B17A9173BAF2400BA1A92 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
 		1C9B17AA173BAF2400BA1A92 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		1CDA392F17477CA100C3DE82 /* InsertTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertTopicViewController.h; sourceTree = "<group>"; };
+		1CDA393017477CA100C3DE82 /* InsertTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertTopicViewController.m; sourceTree = "<group>"; };
+		1CDA393117477CA100C3DE82 /* InsertTopicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InsertTopicViewController.xib; sourceTree = "<group>"; };
+		1CDA39341747C9E200C3DE82 /* InsertAtUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertAtUserViewController.h; sourceTree = "<group>"; };
+		1CDA39351747C9E200C3DE82 /* InsertAtUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertAtUserViewController.m; sourceTree = "<group>"; };
+		1CDA39361747C9E200C3DE82 /* InsertAtUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InsertAtUserViewController.xib; sourceTree = "<group>"; };
 		1CDCCE2017315D7F009023A5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1CDCCE2217325C06009023A5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -656,15 +669,9 @@
 		188BEFB216AD1968006A2602 = {
 			isa = PBXGroup;
 			children = (
-				1C5314031745547700E0B766 /* MapKit.framework */,
-				1CDCCE2217325C06009023A5 /* AudioToolbox.framework */,
-				1C806FC3173FE70E00927CA8 /* CoreLocation.framework */,
-				188BF01F16AD1D5E006A2602 /* CoreText.framework */,
-				1CDCCE2017315D7F009023A5 /* Default@2x.png */,
 				188BEFC016AD1968006A2602 /* Frameworks */,
 				1C3D0D221731293C00A89012 /* libicucore.dylib */,
 				188BEFBE16AD1968006A2602 /* Products */,
-				188BF01D16AD1CDC006A2602 /* QuartzCore.framework */,
 				188BEFC716AD1968006A2602 /* WXWeibo */,
 			);
 			sourceTree = "<group>";
@@ -680,6 +687,12 @@
 		188BEFC016AD1968006A2602 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				188BF01D16AD1CDC006A2602 /* QuartzCore.framework */,
+				1C5314031745547700E0B766 /* MapKit.framework */,
+				1CDCCE2217325C06009023A5 /* AudioToolbox.framework */,
+				1C806FC3173FE70E00927CA8 /* CoreLocation.framework */,
+				188BF01F16AD1D5E006A2602 /* CoreText.framework */,
+				1CDCCE2017315D7F009023A5 /* Default@2x.png */,
 				188BEFC116AD1968006A2602 /* UIKit.framework */,
 				188BEFC316AD1968006A2602 /* Foundation.framework */,
 				188BEFC516AD1968006A2602 /* CoreGraphics.framework */,
@@ -862,6 +875,14 @@
 				1C5313B517454FE700E0B766 /* SendViewController.h */,
 				1C5313B617454FE700E0B766 /* SendViewController.m */,
 				1C5313B717454FE700E0B766 /* SendViewController.xib */,
+				1CDA392F17477CA100C3DE82 /* InsertTopicViewController.h */,
+				1CDA393017477CA100C3DE82 /* InsertTopicViewController.m */,
+				1CDA393117477CA100C3DE82 /* InsertTopicViewController.xib */,
+				1CDA39341747C9E200C3DE82 /* InsertAtUserViewController.h */,
+				1CDA39351747C9E200C3DE82 /* InsertAtUserViewController.m */,
+				1CDA39361747C9E200C3DE82 /* InsertAtUserViewController.xib */,
+				1C7E04071748DDFD007F35CD /* AtUserCell.h */,
+				1C7E04081748DDFD007F35CD /* AtUserCell.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1413,6 +1434,8 @@
 				1C5314191745553B00E0B766 /* grayArrow.png in Resources */,
 				1C53141A1745553B00E0B766 /* grayArrow@2x.png in Resources */,
 				1C531426174555B000E0B766 /* MessageViewController.xib in Resources */,
+				1CDA393317477CA100C3DE82 /* InsertTopicViewController.xib in Resources */,
+				1CDA39381747C9E300C3DE82 /* InsertAtUserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1496,6 +1519,9 @@
 				1C53141F1745556900E0B766 /* WXFaceScrollView.m in Sources */,
 				1C531425174555B000E0B766 /* MessageViewController.m in Sources */,
 				1C53142C1745563E00E0B766 /* RectButton.m in Sources */,
+				1CDA393217477CA100C3DE82 /* InsertTopicViewController.m in Sources */,
+				1CDA39371747C9E300C3DE82 /* InsertAtUserViewController.m in Sources */,
+				1C7E04091748DDFD007F35CD /* AtUserCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

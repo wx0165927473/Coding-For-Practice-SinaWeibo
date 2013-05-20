@@ -41,5 +41,17 @@
         [sendNav release];
         [sendVC release];
     }
+    
+    if (sender.tag == 102) {
+        SendViewController *sendVC = [[SendViewController alloc] init];
+        BaseNavigationController *sendNav = [[BaseNavigationController alloc] initWithRootViewController:sendVC];
+        [self.appDelegate.menuCtrl presentViewController:sendNav animated:YES completion:^{
+            
+        }];
+        [sendVC selectImage];
+        [sendNav release];
+        [sendVC release];
+    }
 }
+
 @end

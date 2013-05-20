@@ -46,6 +46,7 @@
     }
     
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObject:self.userID forKey:@"uid"];
+    NSLog(@"%@",self.userID);
     
     if (self.cursor.length > 0) {
         [params setObject:self.cursor forKey:@"cursor"];

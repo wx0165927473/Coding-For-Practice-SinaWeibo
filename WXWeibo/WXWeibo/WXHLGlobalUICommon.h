@@ -1,11 +1,3 @@
-//
-//  WXHLGlobalUICommon.h
-//  WXMovie
-//
-//  Created by xiongbiao on 12-12-11.
-//  Copyright (c) 2012年 www.iphonetrain.com 无限互联3G学院. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 #define WXHL_ROW_HEIGHT                 WXHLkDefaultRowHeight

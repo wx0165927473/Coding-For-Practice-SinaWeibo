@@ -1,11 +1,3 @@
-//
-//  SendViewController.m
-//  WXWeibo
-//
-//  Created by Wu Xin on 13-5-12.
-//  Copyright (c) 2013年 www.iphonetrain.com 无限互联3G学院. All rights reserved.
-//
-
 #import "SendViewController.h"
 #import "UIFactory.h"
 #import "NearByViewController.h"
